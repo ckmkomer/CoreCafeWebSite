@@ -1,0 +1,45 @@
+﻿@model EntityLayer.Concrete.About
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+    <h2 class="text-center text-black" >Hakkımızda Düzenleme Sayfası</h2>
+    <br />
+    <div class="container">
+        <form method="post" action="/About/Index">
+            <table class="table">
+                <tr>
+                    <th>Başlık:</th>
+                    <th><input type="text" class="form-control" name="title" value="@Model.Title"></th>
+                </tr>
+                <tr>
+                    <th>Açıklama:</th>
+                    <th><textarea class="form-control" name="description" rows="5">@Model.Description</textarea></th>
+                </tr>
+                <tr>
+                    <th>Resim URL 1:</th>
+                    <th><input type="text" class="form-control" name="imageUrl1" value="@Model.ImageUrl1"></th>
+                </tr>
+                <tr>
+                    <th>Resim URL 2:</th>
+                    <th><input type="text" class="form-control" name="imageUrl2" value="@Model.ImageUrl2"></th>
+                </tr>
+                <tr>
+                    <th>Resim URL 3:</th>
+                    <th><input type="text" class="form-control" name="imageUrl3" value="@Model.ImageUrl3"></th>
+                </tr>
+                 <tr>
+                    <th>Video URL 3:</th>
+                    <th><input type="text" class="form-control" name="imageUrl3" value="@Model.VideoUrl"></th>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+

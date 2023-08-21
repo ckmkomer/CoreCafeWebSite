@@ -1,0 +1,38 @@
+﻿@model EntityLayer.Concrete.MenuItem
+@{
+    ViewData["Title"] = "EditMenu";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+
+            <form method="post" action="/Menu/EditMenu">
+                <div class="form-group">
+                    <label for="name">Başlık:</label>
+                    <input type="text" class="form-control" id="name" name="title" value="@Model.Title" />
+                </div>
+                <div class="form-group">
+                    <label for="specialization">Açıklama:</label>
+                    <input type="text" class="form-control" id="des" name="description" value="@Model.Description" />
+                </div>
+                <div class="form-group">
+                    <label for="imageUrl">Fiyat</label>
+                    <input type="text" class="form-control" id="p" name="price" value="@Model.Price" />
+                </div>
+                 <div class="form-group">
+                    <label for="specialization">Görsel Yolu</label>
+                    <input type="text" class="form-control" id="ıcon" name="ımageurl" value="" />
+                </div>
+                @*<div class="form-group">
+                    <label for="specialization">Icon</label>
+                    <input type="text" class="form-control" id="ıcon" name="ıconurl" value="" />
+                </div>*@
+
+                <input type="hidden" name="chefID" value="@Model.MenuItemID" />
+                <button type="submit" class="btn btn-primary">Kaydet</button>
+            </form>
+        </div>
+    </div>
+</div>

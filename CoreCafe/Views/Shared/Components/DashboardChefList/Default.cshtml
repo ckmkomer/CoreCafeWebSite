@@ -1,0 +1,40 @@
+﻿@using EntityLayer.Concrete
+@model List<Chef>
+
+@{
+    Layout = null;
+}
+
+
+
+<section class="section" id="chefs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 offset-lg-4 text-center">
+                <div class="section-heading">
+                    <h2>Çalışma Arkadaşlarımız.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+
+
+                
+
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="@item.ImageUrl" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Name</h5>
+                            <p class="card-text">@item.Specialization</p>
+                            @*<a href="#" class="btn btn-primary">Go somewhere</a>*@
+                        </div>
+                    </div>
+                
+            }
+
+        </div>
+    </div>
+</section>

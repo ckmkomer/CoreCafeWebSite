@@ -1,0 +1,34 @@
+﻿@model EntityLayer.Concrete.ContactInfo
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+        <form method="post" action="/Contact/Index">
+            <table class="table">
+                <tr>
+                    <th>Adres:</th>
+                    <th><input type="text" class="form-control" name="adress" value="@Model.Address"></th>
+                </tr>
+                <tr>
+                    <th>Telefon:</th>
+                    <th><input type="text" class="form-control" name="phone" value="@Model.Phone"></th>
+                </tr>
+                <tr>
+                    <th>Mail:</th>
+                    <th><input type="text" class="form-control" name="email" value="@Model.Email"></th>
+                </tr>
+                @*<tr>
+                    <th>Çalışma Saatleri:</th>
+                    <th><input type="text" class="form-control" name="hoursofoperation" value="@Model.HoursOfOperation"></th>
+                </tr>*@
+                <tr>
+                    <td colspan="2">
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+

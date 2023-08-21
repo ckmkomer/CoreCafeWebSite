@@ -1,0 +1,339 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Cafe & Restuarant Web Site</title>
+
+    <link href="~/inspinia-gh-pages/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/inspinia-gh-pages/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Morris -->
+    <link href="~/inspinia-gh-pages/css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+
+    <link href="~/inspinia-gh-pages/css/animate.css" rel="stylesheet">
+    <link href="~/inspinia-gh-pages/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element">
+                        <img alt="image" class="rounded-circle" src="~/inspinia-gh-pages/img/profile_small.jpg"/>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="block m-t-xs font-bold">Ömer Çakmak</span>
+                            <span class="text-muted text-xs block">Şef <b class="caret"></b></span>
+                        </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a class="dropdown-item" href="profile.html">Profil</a></li>
+                            <li><a class="dropdown-item" href="contacts.html">Mesajlar</a></li>
+                            <li><a class="dropdown-item" href="mailbox.html">Ayarlar</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="login.html">Çıkış Yap</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                        IN+
+                    </div>
+                </li>
+                <li class="active">
+                    <a href="/Dashboard/Index/"><i class="fa fa-user-o"></i> <span class="nav-label">Dashboard</span> </a> 
+                </li>
+                <li>
+                    <a href="/Default/Index/"><i class="fa fa-eye"></i> <span class="nav-label">Siteye Git</span></a>
+                </li>
+                <li>
+                    <a href="/Reazarvation/Index/"><i class="fa fa-envelope"></i> <span class="nav-label">Rezarvasyonlar</span></a>
+                </li>
+                <li>
+                    <a href="/About/Index/"><i class="fa fa-id-card"></i> <span class="nav-label">Hakkımızda </span></a>
+                </li>
+                <li>
+                    <a href="/Gallery/Index/"><i class="fa fa-picture-o"></i> <span class="nav-label">Görseller</span></a>
+                </li>
+                <li>
+                    <a href="/Menu/Index/"><i class="fa fa-coffee"></i> <span class="nav-label">Menü</span></a>
+                </li>
+                <li>
+                    <a href="/MenuArea/Index/"><i class="fa fa-diamond"></i> <span class="nav-label">Haftanın Menü Önerisi</span></a>
+                </li>
+                <li>
+                    <a href="/Chef/Index/"><i class="fa fa-address-card-o"></i> <span class="nav-label">Şeflerimiz</span></a>  
+                </li>
+                <li>
+                    <a href="/SocialMedia/Index/"><i class="fa fa-share-square-o"></i> <span class="nav-label">Sosyal Medya</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-wrench"></i> <span class="nav-label">Ayarlar</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-sign-out"></i> <span class="nav-label">Çıkış Yap</span></a>
+                </li>
+                
+               
+            </ul>
+
+        </div>
+    </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+        <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+            <form role="search" class="navbar-form-custom" action="search_results.html">
+                <div class="form-group">
+                    <input type="text" placeholder="Ara..." class="form-control" name="top-search" id="top-search">
+                </div>
+            </form>
+        </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    <span class="m-r-sm text-muted welcome-message">Hoş Geldin <span>Ömer Çakmak</span> </span>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <div class="dropdown-messages-box">
+                                <a class="dropdown-item float-left" href="profile.html">
+                                    <img alt="image" class="rounded-circle" src="~/inspinia-gh-pages/img/a7.jpg">
+                                </a>
+                                <div>
+                                    <small class="float-right">3 gün önce</small>
+                                    <strong>Mike Loreipsum</strong> started following <strong>Ömür Çıkmaz</strong>. <br>
+                                    <small class="text-muted">  7:58 pm - 10.06.2023</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        <li>
+                            <div class="dropdown-messages-box">
+                                <a class="dropdown-item float-left" href="profile.html">
+                                    <img alt="image" class="rounded-circle" src="~/inspinia-gh-pages/img/a4.jpg">
+                                </a>
+                                <div>
+                                    <small class="float-right text-navy">5 gün önce</small>
+                                    <strong>Chris Johnatan Overtunk</strong> started following <strong>Ayşe Yılmaz</strong>. <br>
+                                    <small class="text-muted">Cumartesi 1:21 pm - 11.06.2023</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        <li>
+                            <div class="dropdown-messages-box">
+                                <a class="dropdown-item float-left" href="profile.html">
+                                    <img alt="image" class="rounded-circle" src="~/inspinia-gh-pages/img/profile.jpg">
+                                </a>
+                                <div>
+                                    <small class="float-right">23h ago</small>
+                                    <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
+                                    <small class="text-muted">2 days ago at 2:30 am - 11.06.2023</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        <li>
+                            <div class="text-center link-block">
+                                <a href="mailbox.html" class="dropdown-item">
+                                    <i class="fa fa-envelope"></i> <strong>Tüm Mesajlar</strong>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="mailbox.html" class="dropdown-item">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                    <span class="float-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        <li>
+                            <a href="profile.html" class="dropdown-item">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <span class="float-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        <li>
+                            <a href="grid_options.html" class="dropdown-item">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <span class="float-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        <li>
+                            <div class="text-center link-block">
+                                <a href="notifications.html" class="dropdown-item">
+                                    <strong>See All Alerts</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="login.html">
+                        <i class="fa fa-sign-out"></i> Çıkış
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        </div>
+<div class="container">   
+        @RenderBody()
+     </div>
+
+
+        
+        
+
+        </div>
+       
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="~/inspinia-gh-pages/js/jquery-3.1.1.min.js"></script>
+    <script src="~/inspinia-gh-pages/js/popper.min.js"></script>
+    <script src="~/inspinia-gh-pages/js/bootstrap.js"></script>
+    <script src="~/inspinia-gh-pages/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="~/inspinia-gh-pages/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Flot -->
+    <script src="~/inspinia-gh-pages/js/plugins/flot/jquery.flot.js"></script>
+    <script src="~/inspinia-gh-pages/flot/jquery.flot.spline.js"></script>
+    <script src="~/inspinia-gh-pages/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="~/inspinia-gh-pages/js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="~/inspinia-gh-pages/js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="~/inspinia-gh-pages/js/plugins/flot/jquery.flot.pie.js"></script>
+    <script src="~/inspinia-gh-pages/js/plugins/flot/jquery.flot.symbol.js"></script>
+    <script src="~/inspinia-gh-pages/js/plugins/flot/curvedLines.js"></script>
+
+    <!-- Peity -->
+    <script src="~/inspinia-gh-pages/js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="~/inspinia-gh-pages/js/demo/peity-demo.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="~/inspinia-gh-pages/js/inspinia.js"></script>
+    <script src="~/inspinia-gh-pages/js/plugins/pace/pace.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="~/inspinia-gh-pages/js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- Jvectormap -->
+    <script src="~/inspinia-gh-pages/js/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="~/inspinia-gh-pages/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+
+    <!-- Sparkline -->
+    <script src="~/inspinia-gh-pages/js/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Sparkline demo data  -->
+    <script src="~/inspinia-gh-pages/js/demo/sparkline-demo.js"></script>
+
+    <!-- ChartJS-->
+    <script src="~/inspinia-gh-pages/js/plugins/chartJs/Chart.min.js"></script>
+
+    @*<script>
+        $(document).ready(function() {
+
+
+            var d1 = [[1262304000000, 6], [1264982400000, 3057], [1267401600000, 20434], [1270080000000, 31982], [1272672000000, 26602], [1275350400000, 27826], [1277942400000, 24302], [1280620800000, 24237], [1283299200000, 21004], [1285891200000, 12144], [1288569600000, 10577], [1291161600000, 10295]];
+            var d2 = [[1262304000000, 5], [1264982400000, 200], [1267401600000, 1605], [1270080000000, 6129], [1272672000000, 11643], [1275350400000, 19055], [1277942400000, 30062], [1280620800000, 39197], [1283299200000, 37000], [1285891200000, 27000], [1288569600000, 21000], [1291161600000, 17000]];
+
+            var data1 = [
+                { label: "Data 1", data: d1, color: '#17a084'},
+                { label: "Data 2", data: d2, color: '#127e68' }
+            ];
+            $.plot($("#flot-chart1"), data1, {
+                xaxis: {
+                    tickDecimals: 0
+                },
+                series: {
+                    lines: {
+                        show: true,
+                        fill: true,
+                        fillColor: {
+                            colors: [{
+                                opacity: 1
+                            }, {
+                                opacity: 1
+                            }]
+                        },
+                    },
+                    points: {
+                        width: 0.1,
+                        show: false
+                    },
+                },
+                grid: {
+                    show: false,
+                    borderWidth: 0
+                },
+                legend: {
+                    show: false,
+                }
+            });
+
+            var lineData = {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [
+                    {
+                        label: "Example dataset",
+                        backgroundColor: "rgba(26,179,148,0.5)",
+                        borderColor: "rgba(26,179,148,0.7)",
+                        pointBackgroundColor: "rgba(26,179,148,1)",
+                        pointBorderColor: "#fff",
+                        data: [48, 48, 60, 39, 56, 37, 30]
+                    },
+                    {
+                        label: "Example dataset",
+                        backgroundColor: "rgba(220,220,220,0.5)",
+                        borderColor: "rgba(220,220,220,1)",
+                        pointBackgroundColor: "rgba(220,220,220,1)",
+                        pointBorderColor: "#fff",
+                        data: [65, 59, 40, 51, 36, 25, 40]
+                    }
+                ]
+            };
+
+            var lineOptions = {
+                responsive: true
+            };
+
+
+            var ctx = document.getElementById("lineChart").getContext("2d");
+            new Chart(ctx, {type: 'line', data: lineData, options:lineOptions});
+
+
+        });
+    </script>*@
+</body>
+</html>

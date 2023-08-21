@@ -1,0 +1,199 @@
+﻿@using EntityLayer.Concrete
+@model List<SpecialMealOffer>
+
+<section class="section" id="offers">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 offset-lg-4 text-center">
+                <div class="section-heading">
+                    <h6>Bu Hafta</h6>
+                    <h2>Bu Haftanın Özel Menüsü</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row" id="tabs">
+                    <div class="col-lg-12">
+                        <div class="heading-tabs">
+                            <div class="row">
+                                <div class="col-lg-6 offset-lg-3">
+                                    <ul>
+                                        <li><a href='#1'><img src="~/templatemo_558_klassy_cafe/assets/images/tab-icon-01.png" alt="">Kahvaltı</a></li>
+                                        <li><a href='#2'><img src="~/templatemo_558_klassy_cafe/assets/images/tab-icon-02.png" alt="">Ara Öğün</a></li>
+                                        <li><a href='#3'><img src="~/templatemo_558_klassy_cafe/assets/images/tab-icon-03.png" alt="">Ana Yemek</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <section class='tabs-content'>
+                            <article id='1'>
+                                <div class="row">
+                                    @foreach (var category1 in Model.Where(item => item.CategoryMenuID == 1))
+                                    {
+                                        var items = Model.Where(item => item.CategoryMenuID == 1).ToList();
+                                        var halfCount = items.Count / 2;
+
+                                        @foreach (var item1 in items.Take(halfCount))
+                                        {
+                                            
+                                                    <div class="col-lg-6">
+                                                        <div class="row">
+                                                            <div class="left-list">
+                                                                <div class="col-lg-12">
+                                                                    <div class="tab-item">
+                                                                        <img src="@item1.ImageUrl" alt="">
+                                                                        <h4>@item1.Title</h4>
+                                                                        <p>@item1.Description</p>
+                                                                        <div class="price">
+                                                                            <h6>@item1.Price</h6>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                        }
+
+                                        @foreach (var item1 in items.Skip(halfCount))
+                                        {
+                                                    <div class="col-lg-6">
+                                                        <div class="row">
+                                                            <div class="right-list">
+                                                                <div class="col-lg-12">
+                                                                    <div class="tab-item">
+                                                                        <img src="@item1.ImageUrl" alt="">
+                                                                        <h4>@item1.Title</h4>
+                                                                        <p>@item1.Description</p>
+                                                                        <div class="price">
+                                                                            <h6>@item1.Price</h6>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                        }
+                                        break;
+                                    }
+                                </div>
+                            </article>
+                        </section>
+                    </div>
+                    <div class="col-lg-12">
+                        <section class='tabs-content'>
+                            <article id='2'>
+                                <div class="row">
+                                    @foreach (var category2 in Model.Where(item => item.CategoryMenuID == 2))
+                                    {
+                                        var items = Model.Where(item => item.CategoryMenuID == 2).ToList();
+                                        var halfCount = items.Count / 2;
+
+                                        @foreach (var item2 in items.Take(halfCount))
+                                        {
+                                                    <div class="col-lg-6">
+                                                        <div class="row">
+                                                            <div class="left-list">
+                                                                <div class="col-lg-12">
+                                                                    <div class="tab-item">
+                                                                        <img src="@item2.ImageUrl" alt="">
+                                                                        <h4>@item2.Title</h4>
+                                                                        <p>@item2.Description</p>
+                                                                        <div class="price">
+                                                                            <h6>@item2.Price</h6>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                        }
+
+                                        @foreach (var item2 in items.Skip(halfCount))
+                                        {
+                                                    <div class="col-lg-6">
+                                                        <div class="row">
+                                                            <div class="right-list">
+                                                                <div class="col-lg-12">
+                                                                    <div class="tab-item">
+                                                                        <img src="@item2.ImageUrl" alt="">
+                                                                        <h4>@item2.Title</h4>
+                                                                        <p>@item2.Description</p>
+                                                                        <div class="price">
+                                                                            <h6>@item2.Price</h6>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                        }
+                                        break;
+                                    }
+                                </div>
+                            </article>
+                        </section>
+                    </div>
+                    <div class="col-lg-12">
+                        <section class='tabs-content'>
+                            <article id='3'>
+                                <div class="row">
+                                    @foreach (var category3 in Model.Where(item => item.CategoryMenuID == 3))
+                                    {
+                                        var items = Model.Where(item => item.CategoryMenuID == 3).ToList();
+                                        var halfCount = items.Count / 2;
+
+                                        @foreach (var item3 in items.Take(halfCount))
+                                        {
+                                                    <div class="col-lg-6">
+                                                        <div class="row">
+                                                            <div class="left-list">
+                                                                <div class="col-lg-12">
+                                                                    <div class="tab-item">
+                                                                        <img src="@item3.ImageUrl" alt="">
+                                                                        <h4>@item3.Title</h4>
+                                                                        <p>@item3.Description</p>
+                                                                        <div class="price">
+                                                                            <h6>@item3.Price</h6>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                        }
+
+                                        @foreach (var item3 in items.Skip(halfCount))
+                                        {
+                                                    <div class="col-lg-6">
+                                                        <div class="row">
+                                                            <div class="right-list">
+                                                                <div class="col-lg-12">
+                                                                    <div class="tab-item">
+                                                                        <img src="@item3.ImageUrl" alt="">
+                                                                        <h4>@item3.Title</h4>
+                                                                        <p>@item3.Description</p>
+                                                                        <div class="price">
+                                                                            <h6>@item3.Price</h6>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                        }
+                                        break;
+                                    }
+                                </div>
+                            </article>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

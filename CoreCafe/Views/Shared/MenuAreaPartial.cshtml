@@ -1,0 +1,57 @@
+﻿@using EntityLayer.Concrete
+@model List<SpecialMealOffer>
+
+<section class="section" id="offers">
+    <div class="container">
+        <!-- Diğer HTML kodları... -->
+        <div class="row">
+            <div class="col-lg-12">
+                <section class='tabs-content'>
+                    <article id='tabs-1'>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="row">
+                                    <div class="left-list">
+                                        @foreach (var item in Model)
+                                        {
+                                                <div class="col-lg-12">
+                                                    <div class="tab-item">
+                                                        <img src="@item.ImageUrl" alt="">
+                                                        <h4>@item.Title</h4>
+                                                        <p>@item.Description</p>
+                                                        <div class="price">
+                                                            <h6>$@item.Price</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="row">
+                                    <div class="right-list">
+                                        @foreach (var item in Model)
+                                        {
+                                                <div class="col-lg-12">
+                                                    <div class="tab-item">
+                                                        <img src="@item.ImageUrl" alt="">
+                                                        <h4>@item.Title</h4>
+                                                        <p>@item.Description</p>
+                                                        <div class="price">
+                                                            <h6>$@item.Price</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Diğer makaleler için de aynı işlemi tekrarlayın... -->
+                </section>
+            </div>
+        </div>
+    </div>
+</section>

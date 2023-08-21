@@ -1,0 +1,56 @@
+﻿@using EntityLayer.Concrete
+@model List<Chef>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="text-center text-color">Şeflerimiz</h2>
+<br />
+@if (TempData["status"]!=null)
+{
+     <div class="alert alert-primary" role="alert">
+     @TempData["status"]    @*tempdata bir kez görünür  bir kereden sonra tempdata null olur. *@
+    </div>
+}
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            
+
+            <div class="table-responsive ">
+                <table class="table caption-top">
+                    <thead>
+                        <tr class="border-5">
+                            <th>ID</th>
+                            <th>Ad Soyad</th>
+                            <th>Uzmanlık</th>
+                             <th>Görsel Yolu</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+
+
+                                    <tr>
+                                        <td>#</td>
+                                        <td>@item.Name</td>
+                                        <td>@item.Specialization</td>
+                                        <td>@item.ImageUrl</td>
+                                        <td><a href="/Chef/DeleteChef/@item.ChefID" class="btn btn-outline-danger">Sil</a></td>
+                                        <td><a href="/Chef/EditChef/@item.ChefID" class="btn btn-outline-success">Güncelle</a></td>
+                                    </tr>
+                        }
+                    </tbody>
+                </table>
+                <a href="/Chef/AddChef/" class="btn btn-outline-info">Yeni Şef Ekle</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
